@@ -53,7 +53,7 @@ class syntax_plugin_fields extends DokuWiki_Syntax_Plugin {
         } elseif (count($extinfo) == 2) {
             $field_value = $extinfo[1];
         } else { // value may contain equal signs
-            $field_value = implode(array_slice($extinfo,1), '=');
+            $field_value = implode('=', array_slice($extinfo,1));
         }
         return array($field_name, $field_value);
     }
